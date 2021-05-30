@@ -1,0 +1,74 @@
+﻿@model JogoForcaMVC.Models.WordModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lifes</h2>
+
+<div id="lifes">
+    <div>
+        <p id="life1" class="glyphicon glyphicon-heart"></p>
+        <p id="life2" class="glyphicon glyphicon-heart"></p>
+        <p id="life3" class="glyphicon glyphicon-heart"></p>
+        <p id="life4" class="glyphicon glyphicon-heart"></p>
+        <p id="life5" class="glyphicon glyphicon-heart"></p>
+        <p id="life6" class="glyphicon glyphicon-heart"></p>
+        <p id="life7" class="glyphicon glyphicon-heart"></p>
+        <p id="life8" class="glyphicon glyphicon-heart"></p>
+        <p id="life9" class="glyphicon glyphicon-heart"></p>
+        <p id="life10" class="glyphicon glyphicon-heart"></p>
+    </div>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+<div class="row">
+    @{
+        int i = 0;
+        foreach (char letter in @Model.SelectedWord)
+        {
+
+            <h1 id="@i" class="col-md-1 table-bordered" style="padding : 5rem;"></h1>
+            i++;
+        }
+    }
+
+</div>
+<div id="keyboard" class="" display="grid">
+    <div class="row">
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">Q</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">W</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">E</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">R</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">T</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">Y</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">U</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">I</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">O</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">P</div>
+    </div>
+    <div class="row" style="align-content:center">
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">A</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">S</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">D</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">F</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">G</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">H</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">J</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">K</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">L</div>
+    </div>
+    <div class="row" style="align-content:center">
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">Z</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">X</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">C</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">V</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">B</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">N</div>
+        <div class="col-md-1 table-bordered" style="padding : 3px; text-align:center; cursor : pointer;" onclick="TryLetter(this)">M</div>
+    </div>
+
+</div>
+<script src="~/Scripts/GameScripts.js"></script>
+
